@@ -1,6 +1,17 @@
+name: My Custom Action
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   test:
+    runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
       - name: 23f2004637@ds.study.iitm.ac.in
         run: echo "Hello, world!"
